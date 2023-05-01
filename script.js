@@ -1,7 +1,3 @@
-//API Key: 9f98e1ed40d24c118f4192729232004
-
-//https://api.weatherapi.com/v1/current.json?key=9f98e1ed40d24c118f4192729232004&q=london
-
 const searchBox = document.querySelector("#searchbox");
 const degreesDisplay = document.querySelector("#degrees");
 const errorMessageDisplay = document.querySelector("#errorMessage");
@@ -26,7 +22,6 @@ async function getWetherData(location) {
       `https://api.weatherapi.com/v1/current.json?key=9f98e1ed40d24c118f4192729232004&q=${location}`
     );
     let json = await request.json();
-    //console.log(json.current);
 
     if (!alternativeUnit.checked) {
       degreesDisplay.innerHTML = json.current.temp_c + "°C";
